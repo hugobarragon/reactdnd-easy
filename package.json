@@ -3,42 +3,43 @@
   "version": "0.1.0",
   "private": false,
   "description": "React-DnD less boilerplate Wrapper",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/hugobarragon/reactdnd-easy"
-	},
-	"keywords": [
-		"react",
-		"reactjs",
-		"file",
-		"drag",
-		"drop",
-		"html5",
-		"draggable",
-		"droppable",
-		"drag-and-drop",
-		"dnd",
-		"javascript",
-		"react-component",
-		"hoc"
-	],
-	"author": "Hugo Barragon (http://github.com/hugobarragon)",
-	"contributors": [	],
-	"license": "MIT",
-	"homepage": "https://github.com/hugobarragon/reactdnd-easy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugobarragon/reactdnd-easy"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "file",
+    "drag",
+    "drop",
+    "html5",
+    "draggable",
+    "droppable",
+    "drag-and-drop",
+    "dnd",
+    "javascript",
+    "react-component",
+    "hoc"
+  ],
+  "author": "Hugo Barragon (http://github.com/hugobarragon)",
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/hugobarragon/reactdnd-easy",
   "dependencies": {
     "@types/lodash": "^4.14.118",
+    "del-cli": "^1.1.0",
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-dnd": "^6.0.0",
     "react-dnd-html5-backend": "^6.0.0",
     "react-dom": "^16.6.3",
-    "react-scripts-ts": "3.1.0"
+    "react-scripts-ts": "^4.0.8"
   },
-  "main": "build/dist/lib/index.js",
+  "main": "build/dist/index",
   "scripts": {
     "start": "react-scripts-ts start",
-    "lib": "tsc"
+    "lib": "del-cli ./build/* && tsc"
   },
   "devDependencies": {
     "@types/faker": "^4.1.4",

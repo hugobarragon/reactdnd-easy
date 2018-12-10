@@ -1,15 +1,25 @@
-import React, { Component } from 'react';
-import { SortableWrapper, HTML5Backend, DragDropContext } from "./indexLib"
+import * as React from 'react';
+import { SortableWrapper, HTML5Backend, DragDropContext } from "./index"
 import { name } from 'faker'
 import update from "immutability-helper"
 import { Steps } from 'antd';
 import "antd/dist/antd.css"
 
 const Step = Steps.Step;
-class App extends Component {
 
-  constructor(props) {
+interface IState {
+  cardsById: object,
+  cardsByIndex: object[]
+}
+
+class App extends React.Component<{}, IState> {
+
+  private pendingUpdateFn: object | undefined
+  private requestedFrame: any
+
+  constructor(props: object) {
     super(props)
+
 
     const cardsById = {}
     const cardsByIndex = []
@@ -26,13 +36,13 @@ class App extends Component {
     }
   }
 
-  render() {
+  public render() {
     const { cardsByIndex } = this.state
     return (
       <div >
         <Steps direction="vertical" size="small" current={1}>
           <SortableWrapper moveCard={this.moveCard}>
-            {cardsByIndex.map(card =>
+            {cardsByIndex.map((card: any) =>
               <Step
                 key={card.id}
                 title={card.id}
@@ -44,14 +54,14 @@ class App extends Component {
     );
   }
 
-  drawFrame = () => {
-    const nextState = update(this.state, this.pendingUpdateFn)
+  private drawFrame = () => {
+    const nextState = update(this.state, this.pendingUpdateFn as object)
     this.setState(nextState)
 
     this.requestedFrame = this.pendingUpdateFn = undefined
   }
 
-  moveCard = (id, afterId) => {
+  private moveCard = (id: any, afterId: any) => {
     const { cardsById, cardsByIndex } = this.state
 
     const card = cardsById[id]
