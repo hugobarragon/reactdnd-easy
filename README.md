@@ -1,5 +1,5 @@
 
-[![npm version](https://img.shields.io/npm/v/react-dnd.svg?style=flat-square)](https://www.npmjs.com/package/reactdnd-easy)
+[![npm version](https://img.shields.io/badge/npm-v0.1.1-green.svg)](https://www.npmjs.com/package/reactdnd-easy)
 
 # reactdnd-easy
 Simple solucion to implement reactdnd without all that complicated code
