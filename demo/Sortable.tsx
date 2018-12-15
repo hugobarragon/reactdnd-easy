@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SortableWrapper, HTML5Backend, DragDropContext } from "./index"
+import { SortableWrapper, HTML5Backend, DragDropContext } from "../src"
 import { name } from 'faker'
 import update from "immutability-helper"
 import { Steps } from 'antd';
@@ -12,7 +12,7 @@ interface IState {
   cardsByIndex: object[]
 }
 
-class App extends React.Component<{}, IState> {
+class Demo extends React.Component<{}, IState> {
 
   private pendingUpdateFn: object | undefined
   private requestedFrame: any
@@ -83,4 +83,4 @@ class App extends React.Component<{}, IState> {
 
 }
 
-export default DragDropContext(HTML5Backend)(App);
+export default DragDropContext(HTML5Backend)(Demo /* as any **for ts */);

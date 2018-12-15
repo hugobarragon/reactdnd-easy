@@ -1,12 +1,12 @@
 
-[![npm version](https://img.shields.io/badge/npm-v0.1.1-green.svg)](https://www.npmjs.com/package/reactdnd-easy)
+[![npm version](https://img.shields.io/badge/npm-v0.1.2-green.svg)](https://www.npmjs.com/package/reactdnd-easy)
 
 # reactdnd-easy
 Simple solucion to implement reactdnd without all that complicated code
 
 # How to Use
 ### Sortable wrapper
-[Sample file](https://github.com/hugobarragon/reactdnd-easy/blob/master/src/App.tsx "Sample file")
+[Sample file](https://github.com/hugobarragon/reactdnd-easy/blob/master/demo/Sortable.tsx "Sample file")
 
 ```javascript
 import { SortableWrapper, HTML5Backend, DragDropContext } from "./index"

@@ -9,6 +9,8 @@
   },
   "keywords": [
     "react",
+    "react-dnd",
+    "reactdnd",
     "reactjs",
     "file",
     "drag",
@@ -27,16 +29,13 @@
   "license": "MIT",
   "homepage": "https://github.com/hugobarragon/reactdnd-easy",
   "dependencies": {
-    "@types/lodash": "^4.14.118",
-    "del-cli": "^1.1.0",
-    "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-dnd": "^6.0.0",
     "react-dnd-html5-backend": "^6.0.0",
     "react-dom": "^16.6.3",
     "react-scripts-ts": "^4.0.8"
   },
-  "main": "build/dist/index",
+  "main": "build/dist/src/index",
   "scripts": {
     "start": "react-scripts-ts start",
     "lib": "del-cli ./build/* && tsc"
@@ -52,6 +51,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "del-cli": "^1.1.0",
     "faker": "^4.1.0",
     "immutability-helper": "^2.8.1",
     "typescript": "^3.1.6"
